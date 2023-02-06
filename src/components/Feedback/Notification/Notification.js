@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const Notification = ({ message }) => {
-  return <p>{message}</p>;
+export const Notification = ({ message, cls }) => {
+  return <p className={cls}>{message}</p>;
 };

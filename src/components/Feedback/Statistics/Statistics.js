@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './Statistics.module.css';
 import { Notification } from '../Notification/Notification';
 
 export const Statistics = ({
@@ -9,26 +10,28 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    <div>
-      <h2>Statistics</h2>
+    <div className={css.statistics}>
+      <h2 className={css.title}>Statistics</h2>
       {!good && !neutral && !bad ? (
-        <Notification message="There is no feedback" />
+        <Notification cls={css.notification} message="There is no feedback" />
       ) : (
-        <ul>
+        <ul className={css.list}>
           <li>
-            <p>Good: {good}</p>
+            <p className={css.desc}>Good: {good}</p>
           </li>
           <li>
-            <p>Neutral: {neutral}</p>
+            <p className={css.desc}>Neutral: {neutral}</p>
           </li>
           <li>
-            <p>Bad: {bad}</p>
+            <p className={css.desc}>Bad: {bad}</p>
           </li>
           <li>
-            <p>Total: {total()}</p>
+            <p className={css.desc}>Total: {total()}</p>
           </li>
           <li>
-            <p>Positive feedback:{positivePercentage()}%</p>
+            <p className={css.desc}>
+              Positive feedback:{positivePercentage()}%
+            </p>
           </li>
         </ul>
       )}
