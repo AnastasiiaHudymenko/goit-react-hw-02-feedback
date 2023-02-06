@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
 
 export const FeedbackOptions = ({ onLeaveFeedback, options }) => {
@@ -28,3 +29,8 @@ function getFirstLetterUpperCase(str) {
   arr[0] = firstLetter;
   return arr.join('');
 }
+
+FeedbackOptions.protoType = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};

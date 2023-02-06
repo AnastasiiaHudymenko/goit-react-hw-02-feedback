@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Section } from './Feedback/Section/Section';
 import { FeedbackOptions } from './Feedback/FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Feedback/Statistics/Statistics';
